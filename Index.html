@@ -1,0 +1,369 @@
+<!-- registration.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="registration-container">
+        <h1>Register</h1>
+        <form id="registrationForm">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="email">Email/Phone Number:</label>
+            <input type="text" id="email" name="email" required>
+
+            <label for="nationality">Nationality:</label>
+            <input type="text" id="nationality" name="nationality" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+            <label for="fingerprint">Fingerprint:</label>
+            <input type="text" id="fingerprint" name="fingerprint" required>
+
+            <label for="language">Language:</label>
+            <select id="language" name="language" required>
+                <option value="en">English</option>
+                <option value="sw">Swahili</option>
+                <!-- Add other languages if needed -->
+            </select>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
+<!-- profile.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="profile-container">
+        <h1>Profile Management</h1>
+        <form id="profileForm">
+            <label for="profilePhoto">Profile Photo:</label>
+            <input type="file" id="profilePhoto" name="profilePhoto">
+
+            <label for="about">About:</label>
+            <textarea id="about" name="about"></textarea>
+
+            <label for="nickname">Nickname:</label>
+            <input type="text" id="nickname" name="nickname">
+
+            <label for="mobile">Mobile:</label>
+            <input type="text" id="mobile" name="mobile">
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email">
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address">
+
+            <label for="placeName">Place Name:</label>
+            <input type="text" id="placeName" name="placeName">
+
+            <label for="mapLocation">Map Location:</label>
+            <input type="text" id="mapLocation" name="mapLocation">
+
+            <label for="gender">Gender:</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+
+            <div id="femaleOptions" style="display: none;">
+                <label for="cycleLength">Cycle Length in Days:</label>
+                <input type="number" id="cycleLength" name="cycleLength">
+
+                <label for="lastPeriodDate">Last Period Date:</label>
+                <input type="date" id="lastPeriodDate" name="lastPeriodDate">
+
+                <label>Pad Type:</label>
+                <input type="checkbox" id="hc" name="padType" value="HC">
+                <label for="hc">HC</label>
+                <input type="checkbox" id="freestyle" name="padType" value="Freestyle">
+                <label for="freestyle">Freestyle</label>
+                <!-- Add other pad types -->
+
+                <button type="submit">Save</button>
+            </div>
+        </form>
+    </div>
+    <script src="profileScripts.js"></script>
+</body>
+</html>
+<!-- userPreferences.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Preferences</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="preferences-container">
+        <input type="text" id="searchBar" placeholder="Search...">
+
+        <div class="filter-options">
+            <label for="priceFilter">Price:</label>
+            <input type="text" id="priceFilter">
+
+            <label for="categoryFilter">Category:</label>
+            <input type="text" id="categoryFilter">
+
+            <label for="brandFilter">Brand:</label>
+            <input type="text" id="brandFilter">
+        </div>
+
+        <div class="buttons">
+            <button id="educationButton">Education</button>
+            <button id="fashionButton">Fashion & Lifestyle</button>
+            <button id="beautyButton">Beauty & Cosmetics</button>
+            <button id="entertainmentButton">Entertainment</button>
+        </div>
+
+        <!-- Sections for each button -->
+        <div id="educationSection" class="section">
+            <!-- Education content -->
+        </div>
+
+        <div id="fashionSection" class="section">
+            <!-- Fashion & Lifestyle content -->
+        </div>
+
+        <div id="beautySection" class="section">
+            <!-- Beauty & Cosmetics content -->
+        </div>
+
+        <div id="entertainmentSection" class="section">
+            <!-- Entertainment content -->
+        </div>
+    </div>
+    <script src="preferencesScripts.js"></script>
+</body>
+</html>
+<!-- shoppingCart.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="cart-container">
+        <h1>Your Cart</h1>
+        <div id="cartItems">
+            <!-- Items will be dynamically inserted here -->
+        </div>
+
+        <button id="checkoutButton">Proceed to Checkout</button>
+    </div>
+    <script src="cartScripts.js"></script>
+</body>
+</html>
+<!-- checkout.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="checkout-container">
+        <h1>Checkout</h1>
+        <form id="checkoutForm">
+            <label for="shippingInfo">Shipping Information:</label>
+            <input type="text" id="shippingInfo" name="shippingInfo" required>
+
+            <label for="paymentOptions">Payment Options:</label>
+            <select id="paymentOptions" name="paymentOptions">
+                <option value="creditCard">Credit Card</option>
+                <option value="paypal">PayPal</option>
+                <option value="lipaNamba">LIPA NAMBA</option>
+            </select>
+
+            <div id="paymentDetails">
+                <!-- Additional fields based on selected payment method -->
+            </div>
+
+            <button type="submit">Complete Purchase</button>
+        </form>
+    </div>
+    <script src="checkoutScripts.js"></script>
+</body>
+</html>
+<!-- orderManagement.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="order-management-container">
+        <h1>Order Management</h1>
+        <div id="orderHistory">
+            <!-- Order history content -->
+        </div>
+
+        <div id="orderTracking">
+            <!-- Order tracking content -->
+        </div>
+    </div>
+    <script src="orderManagementScripts.js"></script>
+</body>
+</html>
+<!-- searchFilter.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search and Filter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="search-filter-container">
+        <input type="text" id="search" placeholder="Search products...">
+
+        <div class="filters">
+            <label for="price">Price:</label>
+            <input type="text" id="price">
+
+            <label for="category">Category:</label>
+            <input type="text" id="category">
+
+            <label for="brand">Brand:</label>
+            <input type="text" id="brand">
+
+            <label for="sort">Sort By:</label>
+            <select id="sort">
+                <option value="popularity">Popularity</option>
+                <option value="price">Price</option>
+                <option value="rating">Rating</option>
+            </select>
+        </div>
+    </div>
+    <script src="searchFilterScripts.js"></script>
+</body>
+</html>
+<!-- reviews.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Reviews</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="reviews-container">
+        <h1>User Reviews</h1>
+        <form id="reviewForm">
+            <label for="product">Product:</label>
+            <input type="text" id="product" name="product" required>
+
+            <label for="rating">Rating:</label>
+            <select id="rating" name="rating">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+
+            <label for="review">Review:</label>
+            <textarea id="review" name="review" required></textarea>
+
+            <button type="submit">Submit Review</button>
+        </form>
+
+        <div id="reviewList">
+            <!-- Display reviews -->
+        </div>
+    </div>
+    <script src="reviewScripts.js"></script>
+</body>
+</html>
+<!-- wishlist.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wishlist-container">
+        <h1>Your Wishlist</h1>
+        <div id="wishlistItems">
+            <!-- Wishlist items will be dynamically inserted here -->
+        </div>
+    </div>
+    <script src="wishlistScripts.js"></script>
+</body>
+</html>
+<!-- adminPanel.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="admin-panel-container">
+        <h1>Admin Panel</h1>
+        <div id="manageProducts">
+            <h2>Manage Products</h2>
+            <!-- Product management content -->
+        </div>
+
+        <div id="manageOrders">
+            <h2>Manage Orders</h2>
+            <!-- Order management content -->
+        </div>
+
+        <div id="userManagement">
+            <h2>User Management</h2>
+            <!-- User management content -->
+        </div>
+
+        <div id="analyticsReports">
+            <h2>Analytics and Reports</h2>
+            <!-- Analytics and reports content -->
+        </div>
+    </div>
+    <script src="adminPanelScripts.js"></script>
+</body>
+</html>
+mkdir ecommerce-app
+cd ecommerce-app
+npm init -y
+npm install express mongoose bcryptjs jsonwebtoken body-parser cors
